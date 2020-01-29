@@ -1,0 +1,76 @@
+CREATE TABLE artist
+(
+artistID INT AUTO_INCREMENT,
+name VARCHAR (45) NOT NULL,
+artistCountry VARCHAR(45) NOT NULL,
+age INT(3) NOT NULL,
+bio VARCHAR(200),
+careerStart DATE,
+careerEnd DATE,
+PRIMARY KEY(artistID)
+);
+
+
+
+CREATE TABLE album
+(
+albumID INT AUTO_INCREMENT,
+recordLabel VARCHAR(45) NOT NULL,
+numberOfTracks int(100),
+releaseYear DATE,
+albumRating INT(1),
+artistID INT,
+PRIMARY KEY(albumID),
+FOREIGN KEY(artistID) REFERENCES artist(artistID)
+);
+
+
+CREATE TABLE track
+(
+trackID INT AUTO_INCREMENT,
+trackName VARCHAR(45) NOT NULL,
+trackLength VARCHAR(4),
+releaseYear DATE,
+artistID INT,
+albumID INT,
+PRIMARY KEY(trackID),
+FOREIGN KEY(artistID) REFERENCES artist(artistID),
+FOREIGN KEY(albumID) REFERENCES album(albumID)
+);
+
+
+CREATE TABLE registeredUser
+(
+userID INT AUTO_INCREMENT,
+name VARCHAR(45) NOT NULL,
+adress VARCHAR(45),
+email VARCHAR(45),
+password VARCHAR(45),
+PRIMARY KEY(USERID)
+);
+
+
+
+CREATE TABLE admin
+(
+userID INT,
+name VARCHAR(45),
+password VARCHAR(45),
+PRIMARY KEY(name),
+FOREIGN KEY(userID) REFERENCES registereduser(userID)
+);
+
+
+
+
+CREATE TABLE favourites
+(
+trackID INT,
+userID INT,
+trackname VARCHAR(45),
+favouritesName VARCHAR(45),
+PRIMARY KEY(trackID,userID),
+FOREIGN KEY(userID) REFERENCES registereduser(userID),
+FOREIGN KEY(trackID) REFERENCES track(trackID)
+);
+
