@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm1.aspx.cs" Inherits="tracktank.WebForm1" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="artister.aspx.cs" Inherits="tracktank.WebForm1" %>
 
 <!DOCTYPE html>
 
@@ -11,7 +11,7 @@
         <div>
             <h1>artister i databasen vår</h1>
 
-            <asp:GridView ID="Gridview1" AutoGenerateColumns="true" runat="server"></asp:GridView>
+            <asp:GridView ID="Gdview" AutoGenerateColumns="true" runat="server"></asp:GridView>
         </div>
     </form>
 </body>
