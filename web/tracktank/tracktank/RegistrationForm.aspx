@@ -15,24 +15,24 @@
                     <td>  
                         <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>  
                     </td>  
+
+                    <tr>
+                    <td>Adress :</td>  
+                    <td>  
+                        <asp:TextBox ID="TextBox5" runat="server"></asp:TextBox>  
+                    </td>  
   
                </tr>  
                 <tr>  
                     <td>Password</td>  
                      <td> <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox></td>  
                 </tr>  
-                <tr>  
-                    <td>Confirm Password</td>  
-                    <td>  
-                        <asp:TextBox ID="TextBox3" runat="server" TextMode="Password"></asp:TextBox>  
-                    </td>  
-                </tr>  
-                <tr>  
+              
                    
             
                </tr>  
                 <tr>  
-                    <td>Gmail</td>  
+                    <td>Email</td>  
                     <td>  
                         <asp:TextBox ID="TextBox4" runat="server"></asp:TextBox>  
                     </td>  
