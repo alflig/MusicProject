@@ -1,13 +1,14 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="RegistrationForm.aspx.cs" Inherits="tracktank.RegisrationForm" %>  
-  
-<!DOCTYPE html>  
-  
-<html xmlns="http://www.w3.org/1999/xhtml">  
-<head runat="server">  
-    <title></title>  
-</head>  
-<body>  
-    <table align="center" class="style1" style="border: thin solid #008080">
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm2.aspx.cs" Inherits="tracktank.WebForm2" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <table align="center" class="style1" style="border: thin solid #008080">
 <tr>
 <td colspan="3" 
 style="border-bottom: thin solid #008080; font-weight: 700; text-align: center;">
@@ -23,7 +24,7 @@ User Registration Form</td>
 </tr>
 <tr>
 <td class="style6">
-FirstName :
+name :
 </td>
 <td class="style4">
 <asp:TextBox ID="txtfname" runat="server" Width="120px"></asp:TextBox>
@@ -33,34 +34,7 @@ FirstName :
 ControlToValidate="txtfname" ErrorMessage="!!" ForeColor="Red" 
 SetFocusOnError="True"></asp:RequiredFieldValidator>
 </td>
-</tr>
-<tr>
-<td class="style6">
-LastName :
-</td>
-<td class="style4">
-<asp:TextBox ID="txtlname" runat="server" Width="120px"></asp:TextBox>
-</td>
-<td>
-<asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" 
-ControlToValidate="txtlname" ErrorMessage="!!" ForeColor="Red" 
-SetFocusOnError="True"></asp:RequiredFieldValidator>
-</td>
-</tr>
-<tr>
-<td class="style6">
-City :
-</td>
-<td class="style4">
-<asp:TextBox ID="txtcity" runat="server" Width="120px"></asp:TextBox>
-</td>
-<td>
-<asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" 
-ControlToValidate="txtcity" ErrorMessage="!!" ForeColor="Red" 
-SetFocusOnError="True"></asp:RequiredFieldValidator>
-</td>
-</tr>
-<tr>
+
 <td class="style6">
 Email :
 </td>
@@ -112,5 +86,6 @@ onclick="btnregistration_Click" />
 </td>
 </tr>
 </table>
-</body>  
-</html>  
+    </form>
+</body>
+</html>
